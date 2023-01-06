@@ -329,7 +329,14 @@ public class SignupPage extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle4ActionPerformed
         // TODO add your handling code here:
-         
+         if(validateSignup() == true){
+            if(checkDuplicateUser()== false){
+                insertSignupDetails();
+            }else{
+                JOptionPane.showMessageDialog(this, "Username alreday exists");
+            }
+            
+        }
     }//GEN-LAST:event_rSMaterialButtonCircle4ActionPerformed
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
