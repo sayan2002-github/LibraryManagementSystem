@@ -34,6 +34,31 @@ public class LoginPage extends javax.swing.JFrame {
         return true;
     }
     
+    //verify creds
+    public void login(){
+        String name = txt_username.getText();
+        String pwd = txt_password.getText();
+        
+        try{
+            Connection con = DBConnection.getConnection();
+            PreparedStatement pst = con.prepareStatement("select * from users where name = ? and password = ?");
+            pst.setString(1, name);
+            pst.setString(2, pwd);
+            
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()){
+                JOptionPane.showMessageDialog(this,"Login Successful");
+                HomePage home = new HomePage();
+                home.setVisible(true);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(this,"Incorrect Username or Password");
+            }
+        }catch(Exception e){
+            e.getMessage();
+        }
+    }
+    
     
     
 
@@ -239,7 +264,10 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle3ActionPerformed
         // TODO add your handling code here:
-        validateLogin();
+        if(validateLogin()){
+            login();
+        }
+        
     }//GEN-LAST:event_rSMaterialButtonCircle3ActionPerformed
 
     /**
