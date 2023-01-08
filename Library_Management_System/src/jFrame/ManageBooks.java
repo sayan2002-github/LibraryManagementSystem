@@ -4,9 +4,8 @@
  */
 package jFrame;
 
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.Connection;
+import java.sql.*;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -20,8 +19,8 @@ public class ManageBooks extends javax.swing.JFrame {
      * Creates new form ManageBooks
      */
     
-    String book_name, author;
-    int book_id, quantity;
+    String bookName, author;
+    int bookId, quantity;
     DefaultTableModel model;
     public ManageBooks() {
         initComponents();
@@ -48,6 +47,43 @@ public class ManageBooks extends javax.swing.JFrame {
             e.getMessage();
         }
     }
+    //to add book to book_details table
+    public boolean addBook(){
+        
+        boolean isAdded = false;
+        bookId = Integer.parseInt(txt_bookId.getText());
+        bookName = txt_bookName.getText();
+        author = txt_authorName.getText();
+        quantity = Integer.parseInt(txt_quantity.getText());
+        
+        try{
+            Connection con = DBConnection.getConnection();
+            String sql = "insert into book_details values(?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setInt(1,bookId);
+            pst.setString(2, bookName);
+            pst.setString(3, author);
+            pst.setInt(4, quantity);
+            
+            int rowCount = pst.executeUpdate();
+            
+            if(rowCount >0 ){
+                isAdded = true;
+            }
+        } catch(Exception e){
+            e.getMessage();
+        }
+        return isAdded;
+    }
+    
+    
+    
+    //clear table method
+    public void clearTable(){
+        DefaultTableModel model = (DefaultTableModel) tbl_bookDetails.getModel();
+        model.setRowCount(0);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -304,7 +340,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_bookDetails);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 720, 300));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 720, 390));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 51, 51));
@@ -384,6 +420,13 @@ public class ManageBooks extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle4ActionPerformed
         // TODO add your handling code here:
+        if(addBook()== true){
+            JOptionPane.showMessageDialog(this,"Book Added");
+            clearTable();
+            setBookDetailsToTable();
+        }else{
+            JOptionPane.showMessageDialog(this, "Book Addition Failed");
+        }
     }//GEN-LAST:event_rSMaterialButtonCircle4ActionPerformed
 
     private void rSMaterialButtonCircle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle5ActionPerformed
@@ -401,7 +444,9 @@ public class ManageBooks extends javax.swing.JFrame {
         TableModel model = tbl_bookDetails.getModel();
         txt_bookId.setText(model.getValueAt(rowNo, 0).toString());
         txt_bookName.setText(model.getValueAt(rowNo, 1).toString());
-        txt_authorName.setText(model.getValueAt(rowNo, 3).toString());
+        txt_authorName.setText(model.getValueAt(rowNo, 2).toString());
+        txt_quantity.setText(model.getValueAt(rowNo, 3).toString());
+        
         
         
     }//GEN-LAST:event_tbl_bookDetailsMouseClicked
