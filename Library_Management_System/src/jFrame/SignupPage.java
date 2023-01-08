@@ -130,9 +130,9 @@ public class SignupPage extends javax.swing.JFrame {
         txt_password = new app.bolivia.swing.JCTextField();
         txt_email = new app.bolivia.swing.JCTextField();
         txt_contact = new app.bolivia.swing.JCTextField();
-        rSMaterialButtonCircle3 = new necesario.RSMaterialButtonCircle();
-        rSMaterialButtonCircle4 = new necesario.RSMaterialButtonCircle();
         jLabel17 = new javax.swing.JLabel();
+        rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
+        rSMaterialButtonCircle3 = new rojerusan.RSMaterialButtonCircle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -265,24 +265,28 @@ public class SignupPage extends javax.swing.JFrame {
         });
         jPanel2.add(txt_contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 300, -1));
 
-        rSMaterialButtonCircle3.setText("Log In");
-        rSMaterialButtonCircle3.setActionCommand("rSMaterialButtonCircle");
-        jPanel2.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 680, 370, 80));
-
-        rSMaterialButtonCircle4.setBackground(new java.awt.Color(255, 51, 51));
-        rSMaterialButtonCircle4.setText("Sign UP");
-        rSMaterialButtonCircle4.setActionCommand("rSMaterialButtonCircle2");
-        rSMaterialButtonCircle4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle4ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 580, 360, 80));
-
         jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Signup Page");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 170, 30));
+
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 0, 255));
+        rSMaterialButtonCircle2.setText("LOGIN");
+        rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 670, 290, 70));
+
+        rSMaterialButtonCircle3.setBackground(new java.awt.Color(255, 51, 51));
+        rSMaterialButtonCircle3.setText("SIGNUP");
+        rSMaterialButtonCircle3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 290, 70));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 0, 540, 830));
 
@@ -305,10 +309,6 @@ public class SignupPage extends javax.swing.JFrame {
     private void txt_contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_contactActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_contactActionPerformed
-
-    private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
 //TO SAYAN : rSMaterialButtonCircle2ActionPerformed is equals to this method(rSMaterialButtonCircle4ActionPerformed), so
 // I've added all the new method in your rSMaterialButtonCircle2ActionPerformed also;
     private void rSMaterialButtonCircle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
@@ -350,6 +350,18 @@ public class SignupPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Username Already Exists");
         }
     }//GEN-LAST:event_txt_usernameFocusLost
+
+    private void rSMaterialButtonCircle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle3ActionPerformed
+        // TODO add your handling code here:
+        if(validateSignup() == true){
+            if(checkDuplicateUser()== false){
+                insertSignupDetails();
+            }else{
+                JOptionPane.showMessageDialog(this, "Username alreday exists");
+            }
+            
+        }
+    }//GEN-LAST:event_rSMaterialButtonCircle3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -405,8 +417,8 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private necesario.RSMaterialButtonCircle rSMaterialButtonCircle3;
-    private necesario.RSMaterialButtonCircle rSMaterialButtonCircle4;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
     private app.bolivia.swing.JCTextField txt_contact;
     private app.bolivia.swing.JCTextField txt_email;
     private app.bolivia.swing.JCTextField txt_password;
