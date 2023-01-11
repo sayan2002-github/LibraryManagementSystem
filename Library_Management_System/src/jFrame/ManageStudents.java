@@ -157,10 +157,10 @@ public class ManageStudents extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         rSMaterialButtonCircle3 = new rojerusan.RSMaterialButtonCircle();
-        rSMaterialButtonCircle4 = new rojerusan.RSMaterialButtonCircle();
         rSMaterialButtonCircle5 = new rojerusan.RSMaterialButtonCircle();
         combo_branchName = new javax.swing.JComboBox<>();
         combo_courseName = new javax.swing.JComboBox<>();
+        rSMaterialButtonCircle6 = new rojerusan.RSMaterialButtonCircle();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -274,15 +274,6 @@ public class ManageStudents extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 600, 140, 70));
 
-        rSMaterialButtonCircle4.setBackground(new java.awt.Color(102, 102, 0));
-        rSMaterialButtonCircle4.setText("ADD");
-        rSMaterialButtonCircle4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonCircle4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 140, 70));
-
         rSMaterialButtonCircle5.setBackground(new java.awt.Color(102, 102, 0));
         rSMaterialButtonCircle5.setText("UPDATE");
         rSMaterialButtonCircle5.addActionListener(new java.awt.event.ActionListener() {
@@ -297,6 +288,15 @@ public class ManageStudents extends javax.swing.JFrame {
 
         combo_courseName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "B.Sc", "M.Sc", "Phd", "B.Tech", "M.Tech", " " }));
         jPanel1.add(combo_courseName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 350, 30));
+
+        rSMaterialButtonCircle6.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle6.setText("ADD");
+        rSMaterialButtonCircle6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(rSMaterialButtonCircle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 140, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 800));
 
@@ -408,17 +408,6 @@ public class ManageStudents extends javax.swing.JFrame {
         
     }//GEN-LAST:event_rSMaterialButtonCircle3ActionPerformed
 
-    private void rSMaterialButtonCircle4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle4ActionPerformed
-        // TODO add your handling code here:
-        if(addStudent()== true){
-            JOptionPane.showMessageDialog(this,"Student Added");
-            clearTable();
-            setStudentDetailsToTable();
-        }else{
-            JOptionPane.showMessageDialog(this, "Student Addition Failed");
-        }
-    }//GEN-LAST:event_rSMaterialButtonCircle4ActionPerformed
-
     private void rSMaterialButtonCircle5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle5ActionPerformed
         // TODO add your handling code here:
         if(updateStudent() == true){
@@ -449,6 +438,10 @@ public class ManageStudents extends javax.swing.JFrame {
         combo_courseName.setSelectedItem(model.getValueAt(rowNo, 2).toString());
         combo_branchName.setSelectedItem(model.getValueAt(rowNo, 3).toString());
     }//GEN-LAST:event_tbl_studentDetailsMouseClicked
+
+    private void rSMaterialButtonCircle6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rSMaterialButtonCircle6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -507,8 +500,8 @@ public class ManageStudents extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle4;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle5;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle6;
     private rojeru_san.complementos.RSTableMetro tbl_studentDetails;
     private app.bolivia.swing.JCTextField txt_studentId;
     private app.bolivia.swing.JCTextField txt_studentName;
