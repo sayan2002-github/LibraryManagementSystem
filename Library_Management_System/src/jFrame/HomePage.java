@@ -288,6 +288,9 @@ public class HomePage extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Sell_26px.png"))); // NOI18N
         jLabel13.setText("  Issue Book");
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel13MouseEntered(evt);
             }
@@ -306,6 +309,17 @@ public class HomePage extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(153, 153, 153));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
         jLabel14.setText("  Return Book");
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel14MouseExited(evt);
+            }
+        });
         jPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 160, -1));
 
         jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 300, 50));
@@ -593,6 +607,30 @@ public class HomePage extends javax.swing.JFrame {
         books.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        // TODO add your handling code here:
+        IssueBook books = new IssueBook();
+        books.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+        ReturnBook books = new ReturnBook();
+        books.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+        // TODO add your handling code here:
+        jPanel12.setBackground(mouseEnterColor);
+    }//GEN-LAST:event_jLabel14MouseEntered
+
+    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
+        // TODO add your handling code here:
+        jPanel12.setBackground(mouseExitColor);
+    }//GEN-LAST:event_jLabel14MouseExited
 
     /**
      * @param args the command line arguments

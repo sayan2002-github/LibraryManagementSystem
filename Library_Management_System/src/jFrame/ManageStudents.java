@@ -441,6 +441,13 @@ public class ManageStudents extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle6ActionPerformed
         // TODO add your handling code here:
+        if(addStudent()== true){
+            JOptionPane.showMessageDialog(this,"Student Added");
+            clearTable();
+            setStudentDetailsToTable();
+        }else{
+            JOptionPane.showMessageDialog(this, "Student Addition Failed");
+        }
     }//GEN-LAST:event_rSMaterialButtonCircle6ActionPerformed
 
     /**
