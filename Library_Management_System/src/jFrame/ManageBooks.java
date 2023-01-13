@@ -11,7 +11,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author Soumya
+ * @author Sayan
  */
 public class ManageBooks extends javax.swing.JFrame {
 
