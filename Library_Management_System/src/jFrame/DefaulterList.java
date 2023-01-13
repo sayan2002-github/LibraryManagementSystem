@@ -4,31 +4,37 @@
  */
 package jFrame;
 
+import java.util.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.Date;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Soumya
  */
-public class IssueBookDetails extends javax.swing.JFrame {
+public class DefaulterList extends javax.swing.JFrame {
 
     /**
      * Creates new form IssueBookDetails
      */
     DefaultTableModel model;
-    public IssueBookDetails() {
+    public DefaulterList() {
         initComponents();
         setIssueBookDetailsToTable();
     }
     
     public void setIssueBookDetailsToTable() {
+        long l = System.currentTimeMillis();
+        Date todaysDate = new Date(l);
         try {
             Connection con = DBConnection.getConnection();
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from issue_book_details where status = '"+"Pending..."+"' ");
+            PreparedStatement st = con.prepareStatement("select * from issue_book_details where due_date < ? and status = ?");
+            st.setDate(1, todaysDate);
+            st.setString(2,"Pending...");
+            ResultSet rs = st.executeQuery();
 
             while (rs.next()) {
                 String id = rs.getString("id");
@@ -91,9 +97,9 @@ public class IssueBookDetails extends javax.swing.JFrame {
         jLabel18.setBackground(new java.awt.Color(102, 153, 0));
         jLabel18.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 25)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        jLabel18.setText("  Issued Book Details");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 80, 320, -1));
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Edit_Property_50px.png"))); // NOI18N
+        jLabel18.setText("  Defaulter List");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, 230, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -142,7 +148,7 @@ public class IssueBookDetails extends javax.swing.JFrame {
         ));
         tbl_issuebookDetails.setColorBackgoundHead(new java.awt.Color(0, 102, 102));
         tbl_issuebookDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
-        tbl_issuebookDetails.setRowHeight(30);
+        tbl_issuebookDetails.setRowHeight(40);
         tbl_issuebookDetails.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_issuebookDetailsMouseClicked(evt);
@@ -196,20 +202,21 @@ public class IssueBookDetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IssueBookDetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DefaulterList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IssueBookDetails().setVisible(true);
+                new DefaulterList().setVisible(true);
             }
         });
     }
