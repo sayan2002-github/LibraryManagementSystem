@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sayan
+ * @author Soumya
  */
 public class SignupPage extends javax.swing.JFrame {
 

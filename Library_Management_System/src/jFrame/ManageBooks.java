@@ -11,7 +11,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author Soumya
+ * @author Sayan
  */
 public class ManageBooks extends javax.swing.JFrame {
 
@@ -173,10 +173,10 @@ public class ManageBooks extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel2.setBackground(new java.awt.Color(102, 153, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 0));
@@ -203,7 +203,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel10.setText("Book Id :");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 170, 20));
 
-        txt_bookId.setBackground(new java.awt.Color(102, 153, 0));
+        txt_bookId.setBackground(new java.awt.Color(0, 102, 102));
         txt_bookId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_bookId.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_bookId.setPlaceholder("Enter Book Id");
@@ -229,7 +229,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel11.setText("Book Name :");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 220, 20));
 
-        txt_bookName.setBackground(new java.awt.Color(102, 153, 0));
+        txt_bookName.setBackground(new java.awt.Color(0, 102, 102));
         txt_bookName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_bookName.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_bookName.setPlaceholder("Enter Book Name");
@@ -255,7 +255,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel12.setText("Author Name :");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 200, 20));
 
-        txt_authorName.setBackground(new java.awt.Color(102, 153, 0));
+        txt_authorName.setBackground(new java.awt.Color(0, 102, 102));
         txt_authorName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_authorName.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_authorName.setPlaceholder("Enter Author Name");
@@ -281,7 +281,7 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel13.setText("Quantity :");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 130, 20));
 
-        txt_quantity.setBackground(new java.awt.Color(102, 153, 0));
+        txt_quantity.setBackground(new java.awt.Color(0, 102, 102));
         txt_quantity.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_quantity.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_quantity.setPlaceholder("Enter Quantity");
@@ -297,7 +297,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel1.add(txt_quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 350, -1));
 
-        rSMaterialButtonCircle3.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle3.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle3.setText("DELETE");
         rSMaterialButtonCircle3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,7 +306,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 600, 140, 70));
 
-        rSMaterialButtonCircle4.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle4.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle4.setText("ADD");
         rSMaterialButtonCircle4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,7 +315,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 140, 70));
 
-        rSMaterialButtonCircle5.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle5.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle5.setText("UPDATE");
         rSMaterialButtonCircle5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,7 +357,7 @@ public class ManageBooks extends javax.swing.JFrame {
                 "Book Id", "Name", "Author", "Quantity"
             }
         ));
-        tbl_bookDetails.setColorBackgoundHead(new java.awt.Color(102, 102, 0));
+        tbl_bookDetails.setColorBackgoundHead(new java.awt.Color(251, 51, 51));
         tbl_bookDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
         tbl_bookDetails.setRowHeight(30);
         tbl_bookDetails.addMouseListener(new java.awt.event.MouseAdapter() {
