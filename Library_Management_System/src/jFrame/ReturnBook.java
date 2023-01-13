@@ -323,7 +323,7 @@ public class ReturnBook extends javax.swing.JFrame {
         });
         panel_main.add(rSMaterialButtonCircle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 620, 300, 70));
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel2.setBackground(new java.awt.Color(102, 153, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 0));
@@ -340,7 +340,7 @@ public class ReturnBook extends javax.swing.JFrame {
 
         panel_main.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 50));
 
-        rSMaterialButtonCircle7.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle7.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle7.setText("Find");
         rSMaterialButtonCircle7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

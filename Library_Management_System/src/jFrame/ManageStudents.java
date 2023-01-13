@@ -173,10 +173,10 @@ public class ManageStudents extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel2.setBackground(new java.awt.Color(102, 153, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(102, 102, 0));
@@ -203,7 +203,7 @@ public class ManageStudents extends javax.swing.JFrame {
         jLabel10.setText("Student Id :");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 170, 20));
 
-        txt_studentId.setBackground(new java.awt.Color(102, 153, 0));
+        txt_studentId.setBackground(new java.awt.Color(0, 102, 102));
         txt_studentId.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_studentId.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_studentId.setPlaceholder("Enter Student Id");
@@ -229,7 +229,7 @@ public class ManageStudents extends javax.swing.JFrame {
         jLabel11.setText("Student Name :");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 220, 20));
 
-        txt_studentName.setBackground(new java.awt.Color(102, 153, 0));
+        txt_studentName.setBackground(new java.awt.Color(0, 102, 102));
         txt_studentName.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_studentName.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         txt_studentName.setPlaceholder("Enter Book Name");
@@ -265,7 +265,7 @@ public class ManageStudents extends javax.swing.JFrame {
         jLabel13.setText("Select Branch :");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 160, 20));
 
-        rSMaterialButtonCircle3.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle3.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle3.setText("DELETE");
         rSMaterialButtonCircle3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,7 +274,7 @@ public class ManageStudents extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 600, 140, 70));
 
-        rSMaterialButtonCircle5.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle5.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle5.setText("UPDATE");
         rSMaterialButtonCircle5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,7 +289,7 @@ public class ManageStudents extends javax.swing.JFrame {
         combo_courseName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "B.Sc", "M.Sc", "Phd", "B.Tech", "M.Tech", " " }));
         jPanel1.add(combo_courseName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 350, 30));
 
-        rSMaterialButtonCircle6.setBackground(new java.awt.Color(102, 102, 0));
+        rSMaterialButtonCircle6.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle6.setText("ADD");
         rSMaterialButtonCircle6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,7 +331,7 @@ public class ManageStudents extends javax.swing.JFrame {
                 "Student Id", "Name", "Course", "Branch"
             }
         ));
-        tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(102, 102, 0));
+        tbl_studentDetails.setColorBackgoundHead(new java.awt.Color(255, 51, 51));
         tbl_studentDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
         tbl_studentDetails.setRowHeight(30);
         tbl_studentDetails.addMouseListener(new java.awt.event.MouseAdapter() {
