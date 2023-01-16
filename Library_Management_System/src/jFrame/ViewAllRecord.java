@@ -4,6 +4,7 @@
  */
 package jFrame;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -20,6 +21,12 @@ public class ViewAllRecord extends javax.swing.JFrame {
     /**
      * Creates new form ViewAllRecord
      */
+    
+    Color mouseEnterColor = new Color(255,51,51);
+    Color mouseExitColor = new Color(0,102,102);
+    Color backEnterColor = new Color(102,153,0);
+    Color backExitColor = new Color(0,102,102);
+    
     DefaultTableModel model;
 
     public ViewAllRecord() {
@@ -104,8 +111,6 @@ public class ViewAllRecord extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -115,6 +120,8 @@ public class ViewAllRecord extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         rSMaterialButtonCircle2 = new necesario.RSMaterialButtonCircle();
         rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         panel_table = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_issuebookDetails = new rojeru_san.complementos.RSTableMetro();
@@ -135,32 +142,18 @@ public class ViewAllRecord extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
         });
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, 38));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 50));
 
-        jPanel6.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel6MouseClicked(evt);
-            }
-        });
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText(" X");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 30, 40));
-
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1450, 0, 50, 40));
-
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 25)); // NOI18N
@@ -184,7 +177,7 @@ public class ViewAllRecord extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 430, 5));
 
-        date_toDate.setColorBackground(new java.awt.Color(0, 102, 102));
+        date_toDate.setColorBackground(new java.awt.Color(255, 51, 51));
         date_toDate.setColorForeground(new java.awt.Color(0, 0, 0));
         date_toDate.setColorSelForeground(new java.awt.Color(255, 51, 51));
         date_toDate.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 17)); // NOI18N
@@ -196,7 +189,7 @@ public class ViewAllRecord extends javax.swing.JFrame {
         jLabel11.setText("Issue Date :");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 120, 20));
 
-        date_fromDate.setColorBackground(new java.awt.Color(0, 102, 102));
+        date_fromDate.setColorBackground(new java.awt.Color(255, 51, 51));
         date_fromDate.setColorForeground(new java.awt.Color(0, 0, 0));
         date_fromDate.setColorSelForeground(new java.awt.Color(255, 51, 51));
         date_fromDate.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 17)); // NOI18N
@@ -208,7 +201,7 @@ public class ViewAllRecord extends javax.swing.JFrame {
         jLabel13.setText("Due Date :");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 120, 20));
 
-        rSMaterialButtonCircle2.setBackground(new java.awt.Color(0, 102, 102));
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 51, 51));
         rSMaterialButtonCircle2.setText("Search");
         rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +210,7 @@ public class ViewAllRecord extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 220, 200, 80));
 
-        rSMaterialButtonRectangle1.setBackground(new java.awt.Color(0, 102, 102));
+        rSMaterialButtonRectangle1.setBackground(new java.awt.Color(255, 51, 51));
         rSMaterialButtonRectangle1.setText("Reset");
         rSMaterialButtonRectangle1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -231,9 +224,36 @@ public class ViewAllRecord extends javax.swing.JFrame {
         });
         jPanel1.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 230, 110, 60));
 
+        jPanel7.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("X");
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel14MouseExited(evt);
+            }
+        });
+        jPanel7.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 30, 40));
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 0, -1, 40));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 320));
 
         panel_table.setBackground(new java.awt.Color(255, 255, 255));
+        panel_table.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tbl_issuebookDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -253,38 +273,13 @@ public class ViewAllRecord extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tbl_issuebookDetails);
 
-        javax.swing.GroupLayout panel_tableLayout = new javax.swing.GroupLayout(panel_table);
-        panel_table.setLayout(panel_tableLayout);
-        panel_tableLayout.setHorizontalGroup(
-            panel_tableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_tableLayout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 928, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(292, Short.MAX_VALUE))
-        );
-        panel_tableLayout.setVerticalGroup(
-            panel_tableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_tableLayout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-        );
+        panel_table.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 928, 390));
 
-        getContentPane().add(panel_table, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 1500, 520));
+        getContentPane().add(panel_table, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 1500, 480));
 
         setSize(new java.awt.Dimension(1500, 800));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jLabel4MouseClicked
-
-    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
@@ -319,6 +314,36 @@ public class ViewAllRecord extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+        // TODO add your handling code here:
+        jPanel7.setBackground(mouseEnterColor);
+    }//GEN-LAST:event_jLabel14MouseEntered
+
+    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
+        // TODO add your handling code here:
+        jPanel7.setBackground(mouseExitColor);
+    }//GEN-LAST:event_jLabel14MouseExited
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        // TODO add your handling code here:
+        jPanel2.setBackground(backEnterColor);
+    }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        // TODO add your handling code here:
+        jPanel2.setBackground(backExitColor);
+    }//GEN-LAST:event_jLabel1MouseExited
 
     /**
      * @param args the command line arguments
@@ -361,12 +386,12 @@ public class ViewAllRecord extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel panel_table;
     private necesario.RSMaterialButtonCircle rSMaterialButtonCircle2;
