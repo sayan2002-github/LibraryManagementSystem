@@ -29,7 +29,8 @@ public class SignupPage extends javax.swing.JFrame {
     //method to add value componenets
     public void insertSignupDetails(){
         String name = txt_username.getText();
-        String pwd = txt_password.getText();
+        char[] p = txt_password.getPassword();
+        String pwd = String.valueOf(p);
         String email = txt_email.getText();
         String contact = txt_contact.getText();
         
@@ -133,7 +134,6 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txt_username = new app.bolivia.swing.JCTextField();
-        txt_password = new app.bolivia.swing.JCTextField();
         txt_email = new app.bolivia.swing.JCTextField();
         txt_contact = new app.bolivia.swing.JCTextField();
         jLabel17 = new javax.swing.JLabel();
@@ -142,6 +142,7 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        txt_password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -202,8 +203,8 @@ public class SignupPage extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Secure_50px.png"))); // NOI18N
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 60, 60));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lock.png"))); // NOI18N
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 60, 60));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,16 +248,6 @@ public class SignupPage extends javax.swing.JFrame {
             }
         });
         jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 300, -1));
-
-        txt_password.setBackground(new java.awt.Color(0, 102, 102));
-        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_password.setPlaceholder("Enter Password");
-        txt_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwordActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 300, -1));
 
         txt_email.setBackground(new java.awt.Color(0, 102, 102));
         txt_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -334,6 +325,10 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/boss.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
+        txt_password.setBackground(new java.awt.Color(0, 102, 102));
+        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 310, -1));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 0, 510, 800));
 
         setSize(new java.awt.Dimension(1500, 800));
@@ -343,10 +338,6 @@ public class SignupPage extends javax.swing.JFrame {
     private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usernameActionPerformed
-
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void txt_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_emailActionPerformed
         // TODO add your handling code here:
@@ -494,7 +485,7 @@ public class SignupPage extends javax.swing.JFrame {
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle3;
     private app.bolivia.swing.JCTextField txt_contact;
     private app.bolivia.swing.JCTextField txt_email;
-    private app.bolivia.swing.JCTextField txt_password;
+    private javax.swing.JPasswordField txt_password;
     private app.bolivia.swing.JCTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }
