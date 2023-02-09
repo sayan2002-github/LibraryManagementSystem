@@ -50,7 +50,7 @@ public class WelcomePage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(255, 51, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 36)); // NOI18N
@@ -61,14 +61,14 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/graduated.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 270, 260));
 
-        rSMaterialButtonCircle2.setBackground(new java.awt.Color(102, 153, 0));
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 255, 204));
         rSMaterialButtonCircle2.setForeground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle2.setText("Students' Section");
         jPanel2.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 280, 80));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 550, 480));
 
-        jPanel3.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Baskerville Old Face", 1, 36)); // NOI18N
@@ -79,7 +79,7 @@ public class WelcomePage extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/admin.png"))); // NOI18N
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(255, 255, 204));
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(102, 153, 0));
         rSMaterialButtonCircle1.setForeground(new java.awt.Color(0, 0, 0));
         rSMaterialButtonCircle1.setText("Admin Section");
         rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
