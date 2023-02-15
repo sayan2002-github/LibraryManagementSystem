@@ -32,6 +32,11 @@ public class IssueBook extends javax.swing.JFrame {
     
     //to fetch the book details from the database and display it to book details panel
     public void getBookDetails(){
+        lbl_bookError.setText(" ");
+        lbl_bookId.setText(" ");
+        lbl_bookName.setText(" ");
+        lbl_author.setText(" ");
+        lbl_quantity.setText(" ");
         int bookId = Integer.parseInt(txt_bookId.getText());
         try{
             Connection con = DBConnection.getConnection();
@@ -53,6 +58,11 @@ public class IssueBook extends javax.swing.JFrame {
     
     //to fetch the student details from the database and display it to student details panel
     public void getStudentDetails(){
+        lbl_studentError.setText(" ");
+        lbl_studentId.setText(" ");
+        lbl_studentName.setText(" ");
+        lbl_course.setText(" ");
+        lbl_branch.setText(" ");
         int studentId = Integer.parseInt(txt_studentId.getText());
         try{
             Connection con = DBConnection.getConnection();
