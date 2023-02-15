@@ -11,7 +11,6 @@ import java.awt.Color;
  * @author Soumya
  */
 public class WelcomePage extends javax.swing.JFrame {
-
     /**
      * Creates new form WelcomePage
      */
