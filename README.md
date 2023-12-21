@@ -2,7 +2,7 @@
 by [Sayan](https://github.com/sayan2002-github) and [Soumyadip](https://github.com/SoumyadipGhosh23)
 
 #### Programming Language used : Core Java
-#### GUI Part - SWING
+#### GUI Part - Jframe
 #### IDE - NetBeans
 #### Database - MYSQL
 #### Connector version used - [mysql-connector-j-8.0.31.jar](https://github.com/sayan2002-github/NewLibraryManagement/blob/master/Library_Management_System/Dependencies/mysql-connector-j-8.0.31.jar)
